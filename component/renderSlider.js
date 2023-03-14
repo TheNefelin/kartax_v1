@@ -1,10 +1,4 @@
 export default function renderSlider(tipoaAlim) {
-    // const tipoaAlim = [
-    //     {id: 1, nombre: "Nombre 1", link: "../img/grupo_01.jpg"},
-    //     {id: 2, nombre: "Nombre 2", link: "../img/grupo_01.jpg"},
-    //     {id: 3, nombre: "Nombre 3", link: "../img/grupo_01.jpg"},
-    // ];
-
     const section = document.createElement("section");
     section.classList.add("slider-section");
 
@@ -35,7 +29,7 @@ export default function renderSlider(tipoaAlim) {
 };
 
 function addMentodos(slide, index, contenedor) {
-    let xInicial, xDespues, diferencia, diferenciaMin = 200;
+    let xInicial, xDespues, diferencia, diferenciaMin = 100;
 
     // eventos para toutch -------------------------
     slide.addEventListener("touchstart", (e) => {
@@ -114,5 +108,8 @@ function moverImg() {
     const contenedor = document.querySelector(".slider-contenedor");
     if (contenedor) {
         contenedor.style.transform = `translateX(${-window.innerWidth * (indexFinal)}px)`
+        console.log(indexFinal)
     };
 };
+
+

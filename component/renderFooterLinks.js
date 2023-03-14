@@ -1,5 +1,6 @@
 export default function renderFooterLinks(linksGrp, links) {
-    const footer = document.createElement("footer");
+    const footer = document.createElement("section");
+    footer.classList.add("footer");
    
     linksGrp.forEach(grp => {
         const div = document.createElement("div");

@@ -15,29 +15,26 @@ export class Api {
         this.#urlLinksGrp = `${this.#url}/links-group`
         this.#urlLinks = `${this.#url}/links`
     };
-    getNegocioAll(){
-        return get(this.#urlNegocio);
-    };
-    getTipoAlimAll(){
-        return get(this.#urlTipoAlim);
-    };
-    getItemCategAll(){
-        return get(this.#urlItemCateg);
-    };
-    getItemCategById(id){
-        return getById(id, this.#urlItemCateg);
-    };
-    getItemAll(){
-        return get(this.#urlItem);
-    };
-    getItemById(id){
-        return getById(id, this.#urlItem);
+    getNegocioById(id){
+        return getById(id, this.#urlNegocio);
     };
     getLinksGrpAll(){
         return get(this.#urlLinksGrp);
     };
     getLinksAll(){
         return get(this.#urlLinks);
+    };
+    getTipoAlimByIdNegocio(id){
+        return getById(id, `${this.#urlTipoAlim}/IdNegocio`);
+    };
+    getItemCategByIdTipoAlimento(id){
+        return getById(id, `${this.#urlItemCateg}/IdTipoAlimento`);
+    };
+    getItemByIdCateg(id){
+        return getById(id, `${this.#urlItem}/IdCateg`);
+    };
+    getItemByIdNegocio(id){
+        return getById(id, `${this.#urlItem}/IdNegocio`);
     };
 };
 

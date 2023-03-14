@@ -25,7 +25,7 @@ export default function renderNavBar() {
         }
     ]
 
-    const navBar = document.createElement("nav");
+    const navBar = document.createElement("section");
     navBar.classList.add("navBar-contenedor");
     // logo -----------------------------
     const a = document.createElement("a");
